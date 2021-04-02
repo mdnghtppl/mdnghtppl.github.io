@@ -5,6 +5,12 @@ body {
     background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
     font-family: 'Inter', sans-serif;
   }
+.shape {
+    position: absolute;
+    width: 150px;
+    top: .5rem;
+    left: .5rem;
+  }
 .card {
     width: 400px;
     height: auto;
@@ -30,9 +36,4 @@ a {
     text-decoration: none;
 }
 
-.shape {
-    position: absolute;
-    width: 150px;
-    top: .5rem;
-    left: .5rem;
-  }
+
