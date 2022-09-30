@@ -1,3 +1,7 @@
+
+
+
+
 body {
     overflow: hidden;
    }
@@ -40,7 +44,7 @@ body {
 
   .content {
     display: grid;
-    grid-template-columns: 1fr 2.3fr;
+    grid-template-columns: 1fr 2fr;
     grid-auto-rows: max-content;
     overflow: hidden;
     overflow-y: scroll;
@@ -50,12 +54,23 @@ body {
     gap: 20px;
   }
 
+  
    .sidebar {
      
      border-right: 1px solid lightgrey;
+     font-size: 1.5vw;
+     padding: 8px;
+     
+     
      
    }
-   
+   .responsive {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    border-radius: 10px;
+    
+  }
   
    
    .links{
@@ -74,6 +89,8 @@ body {
 
    .main {
        padding: 20px;
+       justify-self: center;
+       
    }
   
    
@@ -88,6 +105,15 @@ body {
     height: 50rem;
     background-color: #ffffff;
   }
+
+  @media screen and (max-width: 1000px) {
+    .sidebar{
+      font-size: 18px;
+    }
+  
+  
+  }
+
 
   @media screen and (max-width: 600px) {
     .content {
