@@ -55,6 +55,9 @@ body {
     scrollbar-width: none;  /* Firefox */
     gap: 20px;
   }
+  .content::-webkit-scrollbar {
+    display: none;
+  }
 
   
    .sidebar {
