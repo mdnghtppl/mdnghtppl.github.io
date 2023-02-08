@@ -6,6 +6,8 @@ body {
     overflow: hidden;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    background-color: #3f433f;
+    color: rgb(219, 208, 194);
    }
 
    .menu{
@@ -21,6 +23,7 @@ body {
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
     opacity: .4;
+    
 
    }
 
@@ -62,9 +65,13 @@ body {
   
    .sidebar {
      
-     border-right: 1px solid lightgrey;
+     border-right: 1px solid rgb(25, 29, 27);
      font-size: 1.5vw;
      padding: 8px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+
      
      
      
@@ -79,7 +86,7 @@ body {
   
    
    .links{
-       border-left: 3px solid #000000;
+       border-left: 3px solid rgb(25, 29, 27);
        
        padding: 33%;
        -ms-overflow-style: none;  /* IE and Edge */
@@ -90,7 +97,7 @@ body {
    }
    
    .icons{
-    color: black;
+    color: rgb(144, 171, 125);
     height: 100px;
     font-size: 5em;
     
