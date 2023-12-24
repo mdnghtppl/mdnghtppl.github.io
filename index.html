@@ -1,162 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/mdnght.ico">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            --circlesize: 15vw
+        }
 
-    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> 
+        .circle-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
+        .circle {
+            width: var(--circlesize);
+            height: var(--circlesize);
+            border: 5px solid #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            line-height: 100px;
+            font-size: 7vw;
+            
+            cursor: pointer;
+        }
+        .circle:hover{
+            font-weight: 600;
+        }
 
+        .circle a {
+            text-decoration: none;
+            color: #000;
+            
+        }
+
+        .sub-page {
+            width: 100%;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image {
+            width: 80%;
+            max-width: 400px;
+        }
+
+        
+
+        .sidebar-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        
+    </style>
 </head>
+
 <body>
+    <div class="circle-grid">
+        <div class="circle" onclick="goToPage('_png.html')">png</div>
+        <div class="circle" onclick="goToPage('_obj.html')">obj</div>
+        <div class="circle" onclick="goToPage('_mp3.html')">mp3</div>
+        <div class="circle" onclick="goToPage('_mp4.html')">mp4</div>
+    </div>
     
-    <div class="container">
-        <div class="topbar">
-            <button id="burger" class="cheeseburger" >
-                0O0
-                <!-- logo here  -->
-            </button>
-        </div>
-        <div class="menu">
-            <div><a  href="https://www.instagram.com/mdnghtppl/" target="_blank" >
-                <i class="feather" data-feather="instagram"></i>
-            </a> </div>
-            <div><a  href="https://twitter.com/mdnghtppl" target="_blank" >
-                <i class="feather"data-feather="twitter"></i>
-                
-            </a> </div>
-            <div>   <a href="https://linktr.ee/mdnghtppl" target="_blank" >
-                <i class="feather" data-feather="headphones"></i>
-                
-            </a> </div>
-            
-            
-        </div>
-        <div class="body">
-         
-         <!-- do something with blender photoshop classes -->
-          <div class="content">
-            <div class="sidebar ">
-                <span>album cover for a collaborative project between many musicians aiming to make music 
-                    in the calming minimalist style of animal crossing </span>
 
-            </div>
-            <div class="main">
-                <img src="/images/AC FINAL REAL3.jpg" alt="at night with a new moon, animal crossing characters standing on an island with a tree " 
-                class="responsive" > 
-                <!-- <model-viewer bounds="tight" src="mat reel shoo.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="hilly_terrain_01_2k.hdr" poster="poster.webp" shadow-intensity="0" exposure="0.64" camera-target="0m 0m 0m" camera-orbit="-17.72deg 70.45deg auto">
-                    
-                </model-viewer> -->
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
 
-
-            </div>
-
-            
-            <div class="sidebar">
-                cover for the room36 collective's single "ice tea"
-            </div>
-            <div class="main">
-                <img src = "/images/squooshice tea final.jpg" alt="an orange cute character with a bob haircut, holding an iced tea in the midst of sparkly waves" class="responsive" >
-            </div>
-            <div class="sidebar">
-                wonderland music video
-            </div>
-            <div class="main">
-                <iframe 
-                width="560" height="315" 
-                src="https://www.youtube.com/embed/1Stw6kbqdWY?si=NiXnp31C3XDvLF8l" 
-                title="wonderland mv" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            </div>
-            <div class="sidebar">
-                prada palace
-            </div>
-            <div class="main">
-                vid
-            </div>
-            <div class="sidebar">
-                missed opportunities
-            </div>
-            <div class="main">
-                cover
-            </div>
-            <div class="sidebar">
-                ac teaser vid move next to cover
-            </div>
-            <div class="main">
-                vid
-            </div>
-            <div class="sidebar">
-                lemonhead and then type layout
-            </div>
-            <div class="main">
-                imgs
-            </div>
-            <div class="sidebar">
-                full ce boot seq + cart load + os nav
-            </div>
-            <div class="main">
-                vid
-            </div>
-            <div class="sidebar">
-                cdg beammer
-            </div>
-            <div class="main">
-                vid
-            </div>
-            
-          </div>
-
-          <div class="links">
-            <!-- <i data-feather="cloud"></i> -->
-            <!-- put logo for top icon  -->
-              <!-- <div class="loogo">
-                <img src="/images/newlogo.png">
-              </div> -->
-              <div>
-                <a class = "icons" href="https://www.instagram.com/mdnghtppl/" target="_blank" >
-                    <i data-feather="instagram"></i>
-                    
-                </a>
-                <!-- <A HREF="pokedex/">pokedex</A> -->
-              </div>
-              
-              <div>
-                <a class = "icons" href="https://twitter.com/mdnghtppl" target="_blank" >
-                    <i data-feather="twitter"></i>
-                    
-                </a>
-                <!-- <A HREF="pokedex/">pokedex</A> -->
-                
-              </div>
-              <div>
-                <a class = "icons" href="https://linktr.ee/mdnghtppl" target="_blank" >
-                    <i data-feather="headphones"></i>
-                    
-                </a>
-                <!-- <A HREF="pokedex/">pokedex</A> -->
-                <script>
-                    feather.replace()
-                </script>
-              </div>
-          </div>
-        </div>
-        <footer class="footer">
-            <p>page + art by mdnghtppl</p>
-            <!-- <p><a href="mailto:hege@example.com">hege@example.com</a></p> -->
-          </footer>
-      </div>
-       
-    <script src="main.js"></script>
-    <!-- <script src="script.js"></script> -->
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>    
-    
+        
+        
+    </script>
 </body>
 </html>

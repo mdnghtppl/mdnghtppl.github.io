@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* 2 col grid for images unless phone size then just 1 */
+            body {
+                display: flex;
+                justify-content: right;
+                align-items: right;
+                height: 100vh;
+                margin: 0;
+                --circlesize: 15vh;
+                overflow: hidden;
+                /* background-color: lightblue; */
+                
+                
+            }
+    
+            .circle {
+            width: var(--circlesize);
+            height: var(--circlesize);
+            border: 5px solid #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            font-size: 5vw;
+            
+            cursor: pointer;
+            }
+            .circle:hover{
+                font-weight: 600;
+            }
+            .sidebar{
+                height: 60%;
+                width: 0;
+                display: grid;
+                row-gap: 2vh;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                padding-top: 15vh;
+                transition: .5s;
+
+            }
+
+            .toggle-button{
+                display: inline;
+                justify-self: end;
+                font-size: 5rem;
+                
+                width: 100px;
+                height: 100px;
+                z-index: 2;
+                background-color: transparent;
+                border: none;
+            }
+
+            .toggle-button:hover{
+                font-weight: 600;
+                cursor: pointer;
+            }
+            
+            .see-circle{
+                
+                width: 10rem;
+            }
+
+            .home{
+                position: fixed;
+                top: 1.5rem;
+                left: 2rem;
+                font-size: 1rem;
+                border: none;
+                background-color: transparent;
+                z-index: 2;
+            }
+
+            .home:hover{
+                font-weight: 600;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+<body>
+    <button class="home"onclick="goToPage('index.html')">
+        mainpage
+    </button>
+    <button class="toggle-button">+</button>
+        <div class="sidebar">
+            
+            <div class="circle" onclick="goToPage('_png.html')">png</div>
+            <div class="circle" onclick="goToPage('_obj.html')">obj</div>
+            <div class="circle" onclick="goToPage('_mp3.html')">mp3</div>
+            <div class="circle" onclick="goToPage('_mp4.html')">mp4</div>
+            <!-- <div class="circle" onclick="goToPage('index.html')">temp</div> -->
+        </div>
+
+
+        <script>
+            function goToPage(url) {
+                window.location.href = url;
+            }
+
+            // Sidebar toggle code
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.querySelector('.toggle-button');
+
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle("see-circle");
+            });
+        </script>
+    </body>
+</html>

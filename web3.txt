@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .circle-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .circle a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .sub-page {
+            width: 100%;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image {
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            transition: right 0.3s;
+        }
+
+        .sidebar-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sidebar-circle {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-grid">
+        <div class="circle"><a href="subpage1.html">Page 1</a></div>
+        <div class="circle"><a href="subpage2.html">Page 2</a></div>
+        <div class="circle"><a href="subpage3.html">Page 3</a></div>
+        <div class="circle"><a href="subpage4.html">Page 4</a></div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-circle"><a href="subpage1.html">Page 1</a></div>
+            <div class="sidebar-circle"><a href="subpage2.html">Page 2</a></div>
+            <div class="sidebar-circle"><a href="subpage3.html">Page 3</a></div>
+            <div class="sidebar-circle"><a href="subpage4.html">Page 4</a></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="circle-grid">
+        <div class="circle" onclick="goToPage('subpage1.html')">Page 1</div>
+        <div class="circle" onclick="goToPage('subpage2.html')">Page 2</div>
+        <div class="circle" onclick="goToPage('subpage3.html')">Page 3</div>
+        <div class="circle" onclick="goToPage('subpage4.html')">Page 4</div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-circle" onclick="goToPage('subpage1.html')">Page 1</div>
+            <div class="sidebar-circle" onclick="goToPage('subpage2.html')">Page 2</div>
+            <div class="sidebar-circle" onclick="goToPage('subpage3.html')">Page 3</div>
+            <div class="sidebar-circle" onclick="goToPage('subpage4.html')">Page 4</div>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+
+        // Sidebar toggle code
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.querySelector('.toggle-button');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="circle-grid">
+        <div class="circle" onclick="goToPage('subpage1.html')">Page 1</div>
+        <div class="circle" onclick="goToPage('subpage2.html')">Page 2</div>
+        <div class="circle" onclick="goToPage('subpage3.html')">Page 3</div>
+        <div class="circle" onclick="goToPage('subpage4.html')">Page 4</div>
+    </div>
+    <div class="sidebar">
+        <button class="toggle-button">Toggle Sidebar</button>
+        <div class="sidebar-content">
+            <div class="sidebar-circle" onclick="goToPage('subpage1.html')">Page 1</div>
+            <div class="sidebar-circle" onclick="goToPage('subpage2.html')">Page 2</div>
+            <div class="sidebar-circle" onclick="goToPage('subpage3.html')">Page 3</div>
+            <div class="sidebar-circle" onclick="goToPage('subpage4.html')">Page 4</div>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+
+        // Sidebar toggle code
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.querySelector('.toggle-button');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
